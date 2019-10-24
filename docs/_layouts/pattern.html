@@ -1,0 +1,35 @@
+---
+layout: default
+---
+<div class="row pt-3">
+  <div class="col-3">
+    <nav>
+      <ul class="nav nav-pills flex-column">
+        {% for pattern in site.patterns %}
+          <li class="nav-item">
+            <a class="nav-link{% if page.url == pattern.url %} active{% endif %}" href="{{ pattern.url }}">{{ pattern.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+  <div class="col-9">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% link index.html %}">Home</a></li>
+        {% if page.index == false %}
+          <li class="breadcrumb-item"><a href="{% link patterns.md %}">Patterns</a></li>
+        {% endif %}
+        <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
+      </ol>
+    </nav>
+    <div>
+      <h1>
+        <span>{{ page.title }}</span>
+      </h1>
+      <div>
+        {{ page.content }}
+      </div>
+    </div>
+  </div>
+</div>

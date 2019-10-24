@@ -1,0 +1,44 @@
+{
+    "name": "yourfightsite/ui",
+    "description": "Your Fight Site UI kit.",
+    "version": "1.0.0",
+    "type": "library",
+    "homepage": "https://design-system.yourfightsite.com",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Martin Bean",
+            "email": "martin@yourfightsite.com",
+            "homepage": "https://www.yourfightsite.com"
+        }
+    ],
+    "require": {
+        "illuminate/support": "~5.8.0|^6.0",
+        "illuminate/view": "~5.8.0|^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "YourFightSite\\Ui\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "YourFightSite\\Ui\\UiServiceProvider"
+            ]
+        }
+    },
+    "archive": {
+        "exclude": [
+            "/docs",
+            "/resources/sass",
+            ".npmignore",
+            "package.json"
+        ]
+    }
+}

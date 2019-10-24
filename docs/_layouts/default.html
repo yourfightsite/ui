@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <link href="/css/bootstrap.css" rel="stylesheet" />
+    <link href="/css/app.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="d-flex flex-column" id="app">
+      {% include header.html %}
+      <main class="flex-grow-1" role="main">
+        <nav class="bg-light py-2">
+          <div class="container">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#">Styles</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% link components.md %}">Components</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% link patterns.md %}">Patterns</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        {% if page.container == true %}
+          <div class="container">
+            {{ content }}
+          </div>
+        {% else %}
+          {{ content }}
+        {% endif %}
+      </main>
+      {% include footer.html %}
+    </div>
+  </body>
+</html>

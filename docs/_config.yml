@@ -1,0 +1,29 @@
+title: Your Fight Site Design System
+
+collections:
+  components:
+    label: Components
+    output: true
+  patterns:
+    label: Patterns
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      container: true
+  - scope:
+      path: ""
+      type: "components"
+    values:
+      disabled: false
+      index: false
+      layout: component
+  - scope:
+      path: ""
+      type: "patterns"
+    values:
+      disabled: false
+      index: false
+      layout: pattern
